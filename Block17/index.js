@@ -35,26 +35,26 @@ console.log()
 function underFive(menu) {
     console.log("3. Print an array of drinks that cost 5 and under.")
     var costUnderFive = []
-    costUnderFive = menu.filter(coffee => coffee.price <= 5);
-    costUnderFive.forEach(coffee => costUnderFive.push(coffee.name))
+    costUnderFive = menu.filter(coffee => coffee.price <= 5).map(coffee => ({name:coffee.name,price:coffee.price}));
+    // costUnderFive.forEach(coffee => costUnderFive.push(coffee.name))
     console.log(costUnderFive)
 }
 
 underFive(coffeeMenu)
-console.log("Can't figure out how to only show the name values")
+//console.log("Can't figure out how to only show the name values")
 console.log()
 
 // 4. Print an array of drinks that are priced at an even number.
 function evenPrice(menu) {
     console.log("4. Print an array of drinks that are priced at an even number.")
     var pricedEven = []
-    pricedEven = menu.filter(coffee => coffee.price % 2 === 0);
-    pricedEven.forEach(coffee => pricedEven.push(coffee.name))
+    pricedEven = menu.filter(coffee => coffee.price % 2 === 0).map(coffee => ({name:coffee.name,price:coffee.price}));
+//    pricedEven.forEach(coffee => pricedEven.push(coffee.name))
     console.log(pricedEven)
 }
 
 evenPrice(coffeeMenu)
-console.log("Can't figure out how to only show the name values")
+//console.log("Can't figure out how to only show the name values")
 console.log()
 
 // 5. Print the total if you were to order one of every drink.
@@ -82,8 +82,8 @@ console.log()
 function seasonal(menu) {
     console.log("6. Print an array with all the drinks that are seasonal.")
     var seasonalDrinks = []
-    seasonalDrinks = menu.filter(coffee => coffee.seasonal);
-    seasonalDrinks.forEach(coffee => seasonalDrinks.push(coffee.name))
+    seasonalDrinks = menu.filter(coffee => coffee.seasonal).map(coffee => ({name:coffee.name,price:coffee.price}));
+//    seasonalDrinks.forEach(coffee => seasonalDrinks.push(coffee.name))
     console.log(seasonalDrinks)
 }
 

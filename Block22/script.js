@@ -51,6 +51,7 @@ function renderSongs(songs) {
       </form>
     `;
 
+    
     newSongForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const title = document.getElementById('title').value;
